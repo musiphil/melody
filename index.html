@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>Melody Player</h2>
+    <canvas id="visualizer"></canvas>
+    
+    <div class="input-group">
+        <label for="melodyInput">Melody</label>
+        <input type="text" id="melodyInput">
+    </div>
+
+    <div class="button-row">
+        <button id="playBtn">Play Performance</button>
+        <button id="copyBtn">Copy Link</button>
+    </div>
+    
+    <p id="status">IDLE</p>
+
+    <div class="help">
+        <strong>Modifiers:</strong> <code>-</code> (Add base duration: <code>c-</code> = 2x, <code>c--</code> = 3x) | <code>.</code> (Dots) | <code>,</code> (Halve)<br>
+        <strong>Accidentals:</strong> Sharp: <code>p</code> | Flat: <code>q</code><br>
+        <strong>Commands:</strong> Octave: <code>J</code>, <code>K</code> (global) | <code>j</code>, <code>k</code> (local) | <code>L</code> (length) | <code>T</code> (tempo)
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
